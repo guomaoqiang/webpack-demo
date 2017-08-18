@@ -12,10 +12,9 @@
 
 ## 构建指令全部参照 package.json 下的 script 标签
 
-    * 	cross-env 设置全局变量；配置项如下：
-    *   NODE_ENV=dev 代表设置环境为开发环境，stg=测试环境，prd=生产
-    *   view=true 浏览打包后的文件
-    * 	webpack-dev-server 代表启动本地服务，NODE_ENV的设置对应开启不同的环境，open表示浏览器打开页面
+    * cross-env 设置全局变量；配置项如下：
+    * NODE_ENV=dev 代表设置环境为开发环境，stg=测试环境，prd=生产
+    * webpack-dev-server 代表启动本地服务，NODE_ENV的设置对应开启不同的环境，open表示浏览器打开页面
 
 
 ## 打包配置

@@ -23,7 +23,7 @@ render();
 
 // 用于监听react模块的热更新
 if (module.hot) {
-    module.hot.accept('./App', () => {
-        render(require('./App').default)
+    module.hot.accept('./app', () => {
+        render(require('./app').default)
     })
 }

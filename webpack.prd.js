@@ -17,7 +17,7 @@ module.exports = {
         // 公共模块单独打包成一个文件
         vendor: [
             'react',
-            'react-dom'
+            'react-dom',
             'react-hot-loader'
         ]
     },

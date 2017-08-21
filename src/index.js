@@ -6,10 +6,13 @@ import {
 } from 'react-hot-loader';
 // import './styles/index.scss'
 
+import Fastclick from "fastclick";
+Fastclick.attach(document.body);
+
 import App from './app';
 
 
-import './index.scss';
+// import './styles/index.scss';
 
 const render = () => {
     ReactDOM.render(

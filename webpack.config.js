@@ -20,7 +20,7 @@ module.exports = {
             'react-hot-loader'
         ]
     },
-    devtool: 'source-map',
+    devtool: 'cheap-module-eval-source-map',
     output: {
         // chunkhash hash的区别：hash是所有输出文件共用一个hash，chunkhash是不同文件是不同的hash，可以用这个做缓存
         // 是入口文件的输出名字

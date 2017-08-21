@@ -16,16 +16,19 @@ module.exports = {
         ],
         // 公共模块单独打包成一个文件
         vendor: [
+            'fastclick',
             'react',
             'react-dom',
-            'react-hot-loader'
+            'react-router',
+            // 'react-hot-loader',
+            // 'react-router-dom',
         ]
     },
     output: {
         // chunkhash hash的区别：hash是所有输出文件共用一个hash，chunkhash是不同文件是不同的hash，可以用这个做缓存
         // 是入口文件的输出名字
-        filename: '[name].[chunkhash:4].js',
-        chunkFilename: '[name].[chunkhash:4].js',
+        filename: '[name].[chunkhash:8].js',
+        chunkFilename: '[name].[chunkhash:8].js',
         // 输出绝对路径
         path: path.resolve(__dirname, 'dist'),
     },
@@ -96,7 +99,7 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         }),
         // 提取样式到一个css文件中
-        new ExtractTextPlugin('style.[hash:4].css'),
+        new ExtractTextPlugin('style.[chunkhash:8].css'),
         // 更多参数参考http://webpack.github.io/docs/node.js-api.html#stats-tojson
         // stats-webpack-plugin配制中指定输出webpack.stats.json文件，
         // 该文件可以导入https://chrisbateman.github.io/webpack-visualizer/中

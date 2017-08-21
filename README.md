@@ -39,6 +39,12 @@
     * 图片小于8.192k的都会转成base64
     * 公共模块代码都打包成一个文件，css会单独打包成一个css文件	
 
+##  额外插件配置
+
+    * postcss-loader的autoprefixer自动补充兼容css样式 
+    * fastclick插件适合移动端，解决click延迟事件
+    * 
+
 
 ## 单个项目目录结构
 

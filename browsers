@@ -1,0 +1,8 @@
+# autoprofixer/babel-preset-env 配置
+[production]
+iOS >= 5
+Android >= 4
+
+[development]
+iOS >= 5
+Android >= 4

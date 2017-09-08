@@ -17,7 +17,7 @@ import Demo from './modules/demo/demo';
 const App = () => {
 	return (
 		<Router history={hashHistory}>
-			<Route path='/demo' component={Demo}/>
+			<Route path='/' component={Demo}/>
 		</Router>
 	)
 }

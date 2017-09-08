@@ -11,6 +11,7 @@ Fastclick.attach(document.body);
 
 import App from './app';
 
+console.log(process.env.NODE_ENV);
 
 // import './styles/index.scss';
 

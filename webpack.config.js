@@ -20,7 +20,7 @@ module.exports = {
             'react-hot-loader'
         ]
     },
-    devtool: 'cheap-module-eval-source-map',
+    devtool: 'cheap-module-source-map',
     output: {
         // chunkhash hash的区别：hash是所有输出文件共用一个hash，chunkhash是不同文件是不同的hash，可以用这个做缓存
         // 是入口文件的输出名字
@@ -45,10 +45,23 @@ module.exports = {
                         loader: 'babel-loader',
                         options: {
                             // 支持react ES6语法
-                            presets: ['react', 'es2015'],
+                            presets: [
+                                'react', 
+                                'es2015',
+                                // "stage-0", [
+                                //     "env", {
+                                //         targets: {
+                                //             // 不设置，不会读browserslist配置。。。
+                                //             browsers
+                                //         },
+                                //         modules: false
+                                //     }
+                                // ]
+                            ],
                             plugins: [
                                 // ③
                                 'react-hot-loader/babel',
+                                "transform-decorators-legacy",
                                 // 支持calss属性
                                 'transform-class-properties'
                             ]

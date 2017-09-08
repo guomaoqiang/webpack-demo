@@ -8,8 +8,8 @@
     "start": "webpack-dev-server --open",
     "dev": "cross-env NODE_ENV=dev webpack-dev-server --open",
     "_build_": "rm -rf dist && webpack --config ./webpack.prd.js --progress --profile --colors",
-    "test": "npm run _build_ && cross-env NODE_ENV=testing && npm run header",
-    "build": "npm run _build_ && cross-env NODE_ENV=production && npm run header"
+    "test": "cross-env NODE_ENV=testing && npm run _build_ && npm run header",
+    "build": "cross-env NODE_ENV=production && npm run _build_ && npm run header"
   },
   "author": "guomaoqiang",
   "license": "ISC",
@@ -33,6 +33,7 @@
     "image-webpack-loader": "^3.3.1",
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",
+    "prop-types": "^15.5.10",
     "react-hot-loader": "^3.0.0-beta.7",
     "sass-loader": "^6.0.6",
     "stats-webpack-plugin": "^0.6.1",

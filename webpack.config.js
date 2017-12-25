@@ -3,7 +3,7 @@ var path = require("path");
 var webpack = require('webpack');
 // 处理HTML，可以将所有的入口文件注册到HTML模板中
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-
+var ip = require('ip');
 module.exports = {
     // 入口文件
     entry: {
@@ -32,6 +32,9 @@ module.exports = {
         contentBase: path.resolve(__dirname, 'dist'),
         // ②启用HMR
         hot: true,
+        port: "1234",
+        // 启动服务的地址
+        host: ip.address()
     },
     module: {
         rules: [

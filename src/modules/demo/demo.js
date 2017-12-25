@@ -1,17 +1,21 @@
 import React,{ Component } from 'react';
 import './index.scss';
 
-import Loading from '../../components/loading';
+import Toast from '../../components/toast';
 
 
 
 export default class Demo extends Component {
 
+	open() {
+		this.refs.toast.open('你很厉害哦');
+	}
+
 	render() {
 		return (
 			<div className='demo'>
-				<Loading show={true} opacity={0}/>
-				<div>1232312</div>
+				<Toast ref='toast'/>
+				<div onClick={()=>{this.open()}}>1232312</div>
 			</div>
 		)
 	}

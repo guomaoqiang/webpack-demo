@@ -14,10 +14,18 @@ import {
 // } from 'react-router-dom';
 import Demo from './modules/demo/demo';
 
+// touch 下拉刷新，上拉加载更多
+import Antd from './modules/demo/antd';
+
+// 下拉刷新，向上滚动加载更多
+import add from './modules/demo/add';
+
 const App = () => {
 	return (
 		<Router history={hashHistory}>
 			<Route path='/' component={Demo}/>
+			<Route path='/antd' component={Antd}/>
+			<Route path='/add' component={add}/>
 		</Router>
 	)
 }

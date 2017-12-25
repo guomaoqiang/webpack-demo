@@ -36,6 +36,16 @@ module.exports = {
         // 启动服务的地址
         host: ip.address()
     },
+    // preLoaders: [
+    //   {
+    //     test: /\.js?$/, // 解析.js,.jsx
+    //     loader: 'eslint', // 解析器是eslint,即进行语法检查，不过关的话会报错
+    //     exclude: /node_modules/, // 不检查node_modules目录下的内容
+    //   },
+    // ],
+    // eslint: {
+    //     configFile: '.eslintrc',
+    // },
     module: {
         rules: [
             {
@@ -98,6 +108,13 @@ module.exports = {
         ]
     },
     plugins: [
+        // new webpack.LoaderOptionsPlugin({
+        //     options: {
+        //         eslint: {
+        //             configFile: '.eslintrc'
+        //         }
+        //     }
+        // }),
         // ④启用HMR
         new webpack.HotModuleReplacementPlugin(),
         // 注入全局变量process.env.NODE_ENV

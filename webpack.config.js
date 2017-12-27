@@ -20,6 +20,13 @@ module.exports = {
             'react-hot-loader'
         ]
     },
+    resolve: {
+        alias: {
+            components: path.resolve(__dirname,'src/components/'),
+            styles: path.resolve(__dirname,'src/styles/')
+        },
+        aliasFields: ["browser"],
+    },
     devtool: 'cheap-module-source-map',
     output: {
         // chunkhash hash的区别：hash是所有输出文件共用一个hash，chunkhash是不同文件是不同的hash，可以用这个做缓存

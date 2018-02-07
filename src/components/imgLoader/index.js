@@ -10,7 +10,7 @@ const EXIF = require('exif-js');
  }
  * 
  */
-export default class imgLoader{
+export default class imgLoader {
   // this.imgOutputData;
   constructor(options) {
     this.callback = options.callback;

@@ -22,16 +22,17 @@ import {
 
 import New from './modules/news/index';
 
+console.log(New);
 
-const App = () => {
+export default const App = () => {
 	return (
 		<Router history={hashHistory}>
 			{/*<Route path='/demo' component={Demo}/>
 			<Route path='/antd' component={Antd}/>
 			<Route path='/add' component={add}/>*/}
-			<Route path='/' component={New}/>
+			<Route path='/new' component={New}>
 		</Router>
 	)
 }
 
-export default  App
+

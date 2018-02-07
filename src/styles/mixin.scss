@@ -1,5 +1,16 @@
-@import './global.scss';
+// @import './global.scss';
 
+// 视觉稿是750宽度，设备的独立宽度375*667，根元素的font-size：37.5px；
 @function rem($px) {
 	@return $px/37.5 * 1rem;
+}
+
+// 视觉稿是640宽度，设备的独立宽度320，根元素的font-size：32px；
+@function rem640($px) {
+	@return $px/32 * 1rem;
+}
+
+// 视觉稿是1125，也就是1.5*750
+@function rem1125($px) {
+	@return rem($px/1.5);
 }

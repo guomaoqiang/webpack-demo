@@ -4,6 +4,8 @@ var webpack = require('webpack');
 // 处理HTML，可以将所有的入口文件注册到HTML模板中
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ip = require('ip');
+var browsers = require("browserslist")();
+
 module.exports = {
     // 入口文件
     entry: {
@@ -23,6 +25,7 @@ module.exports = {
     resolve: {
         alias: {
             components: path.resolve(__dirname,'src/components/'),
+            action: path.resolve(__dirname,'src/action/'),
             styles: path.resolve(__dirname,'src/styles/')
         },
         aliasFields: ["browser"],
@@ -39,7 +42,7 @@ module.exports = {
         contentBase: path.resolve(__dirname, 'dist'),
         // ②启用HMR
         hot: true,
-        port: "1234",
+        port: "9999",
         // 启动服务的地址
         host: ip.address()
     },
@@ -68,15 +71,7 @@ module.exports = {
                             presets: [
                                 'react', 
                                 'es2015',
-                                // "stage-0", [
-                                //     "env", {
-                                //         targets: {
-                                //             // 不设置，不会读browserslist配置。。。
-                                //             browsers
-                                //         },
-                                //         modules: false
-                                //     }
-                                // ]
+                                "stage-0"
                             ],
                             plugins: [
                                 // ③

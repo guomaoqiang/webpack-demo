@@ -32,6 +32,13 @@ module.exports = {
         // 输出绝对路径
         path: path.resolve(__dirname, 'dist'),
     },
+    resolve: {
+        alias: {
+            components: path.resolve(__dirname,'src/components/'),
+            styles: path.resolve(__dirname,'src/styles/')
+        },
+        aliasFields: ["browser"],
+    },
     module: {
         rules: [
             {

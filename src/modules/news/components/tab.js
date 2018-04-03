@@ -1,7 +1,19 @@
 import React,{ Component } from 'react';
 import PropTypes from 'prop-types';
-
+import { tapJump } from 'action/action';
+import { connect } from 'react-redux';
 import './css/tab.scss';
+
+@connect(
+	state => {
+		return {...state.tabJump}
+	},
+	dispatch => {
+		return {
+			tabJump:(e) => {dispatch(tapJump(e))}
+		}
+	}
+)
 
 export default class tab extends Component {
 

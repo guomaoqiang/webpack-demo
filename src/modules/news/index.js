@@ -8,24 +8,35 @@ import Tab from './components/tab.js';
 
 import './css/index.scss';
 
-const mapStateToProps = (state) => {
-	console.log(state);
-	const {
-		index,
-		left,
-		tabWidth
-	} = state.tabJump;
-	return {
-		...state.tabJump
-	}
-}
-const mapDispatchToProps = (dispatch) => {
-	return {
-		tabJump:(e) => {dispatch(tapJump(e))}
-	}
-}
+// const mapStateToProps = (state) => {
+// 	console.log(state);
+// 	const {
+// 		index,
+// 		left,
+// 		tabWidth
+// 	} = state.tabJump;
+// 	return {
+// 		...state.tabJump
+// 	}
+// }
+// const mapDispatchToProps = (dispatch) => {
+// 	return {
+// 		tabJump:(e) => {dispatch(tapJump(e))}
+// 	}
+// }
 
-const TabC = connect(mapStateToProps,mapDispatchToProps)(Tab);
+// const TabC = connect(mapStateToProps,mapDispatchToProps)(Tab);
+
+@connect(
+	state => {
+		return {...state.tabJump}
+	},
+	dispatch => {
+		return {
+			tabJump:(e) => {dispatch(tapJump(e))}
+		}
+	}
+)
 
 class New extends Component {
 
@@ -37,7 +48,7 @@ class New extends Component {
 		// } = this.props;
 		return (
 			<div className='news'>
-				<TabC/>
+				<Tab/>
 			</div>
 			
 		)
